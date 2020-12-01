@@ -1,29 +1,33 @@
 import React from 'react';
 import { Formik } from 'formik';
 import { ModalForm } from '../ModalForm/ModalForm';
+import { useDispatch } from 'react-redux';
+import { addNewBook } from '../../../store/actions/tableActions';
 
 export const ModalFormValidate = () => {
+
+    const dispatch = useDispatch();
 
     return (
         <Formik
             initialValues={{
-                bookName: '',
+                name: '',
                 author: '',
-                pageNumber: '',
+                pageNumbers: '',
                 year: '',
             }}
             validate={values => {
                 const errors = {};
-                if (!values.bookName) {
-                    errors.bookName = 'Введите название книги!';
+                if (!values.name) {
+                    errors.name = 'Введите название книги!';
                 } 
                 if (!values.author) {
                     errors.author = 'Введите автора!';
                 } 
                 if (
-                    !/^[0-9]{1,}$/i.test(values.pageNumber)
+                    !/^[0-9]{1,}$/i.test(values.pageNumbers)
                 ) {
-                    errors.pageNumber = 'Введите корректное количество страниц';
+                    errors.pageNumbers = 'Введите корректное количество страниц';
                 } 
                 if (
                     !/^[0-9]{3,4}$/i.test(values.year)
@@ -33,7 +37,8 @@ export const ModalFormValidate = () => {
                 return errors;
             }}
             onSubmit={fields => {
-                alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4))
+                console.log(fields)
+                dispatch(addNewBook(fields));
             }}>
                 {({
                     values,

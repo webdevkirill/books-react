@@ -4,7 +4,7 @@ export const toggleModal = () => ({
     type: TOGGLE_MODAL
 });
 
-export const addNewBook = ({book}) => ({
+export const addNewBook = (book) => ({
     type: ADD_NEW_BOOK,
     payload: book
 });

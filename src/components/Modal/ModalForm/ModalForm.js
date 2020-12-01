@@ -8,13 +8,13 @@ export const ModalForm = ({values, errors, touched, handleChange, handleSubmit})
                 <InputGroup.Text>Название книги</InputGroup.Text>
             </InputGroup.Prepend>
             <FormControl 
-                type="bookName"
-                name="bookName"
+                type="name"
+                name="name"
                 onChange={handleChange}
-                value={values.bookName}
+                value={values.name}
             />
         </InputGroup>
-        <p>{errors.bookName && touched.bookName && errors.bookName}</p>
+        <p>{errors.name && touched.name && errors.name}</p>
         
         <InputGroup className="mb-2">
             <InputGroup.Prepend>
@@ -34,13 +34,13 @@ export const ModalForm = ({values, errors, touched, handleChange, handleSubmit})
                 <InputGroup.Text>Количество страниц</InputGroup.Text>
             </InputGroup.Prepend>
             <FormControl 
-                type="pageNumber"
-                name="pageNumber"
+                type="pageNumbers"
+                name="pageNumbers"
                 onChange={handleChange}
-                value={values.pageNumber}
+                value={values.pageNumbers}
             />
         </InputGroup>
-        <p>{errors.pageNumber && touched.pageNumber && errors.pageNumber}</p>
+        <p>{errors.pageNumbers && touched.pageNumbers && errors.pageNumbers}</p>
 
         <InputGroup className="mb-2">
             <InputGroup.Prepend>
