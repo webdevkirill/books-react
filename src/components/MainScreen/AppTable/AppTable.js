@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import { Container, TableWrapper } from './StyledAppTable';
+import { TableWrapper } from './StyledAppTable';
 
 export const AppTable = () => {
 
