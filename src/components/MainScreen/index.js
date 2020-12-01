@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppTable } from './AppTable/AppTable';
 import { Container } from './MainScreenStyled';
-import { AddBookButton } from './AddBookButton/AddBookButton';
+import { OpenModalButton } from './OpenModalButton/OpenModalButton';
 import { useSelector } from 'react-redux';
 import { AppModal } from '../Modal/AppModal';
 
@@ -13,7 +13,7 @@ export const MainScreen =  () => {
         <Container>
             {isModalOpen && <AppModal />}
             <AppTable />
-            <AddBookButton />
+            <OpenModalButton />
         </Container>
     )
 }

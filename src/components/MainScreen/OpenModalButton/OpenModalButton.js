@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { toggleModal } from '../../../store/actions/tableActions';
 
-export const AddBookButton = () => {
+export const OpenModalButton = () => {
 
     const dispatch = useDispatch();
 
