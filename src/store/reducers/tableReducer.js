@@ -1,3 +1,5 @@
+import { TOGGLE_MODAL } from '../types';
+
 const initialState = {
     table: [
         {
@@ -21,10 +23,12 @@ const initialState = {
             pageNumbers: '250',
             year: '2015'
         }
-    ]
+    ],
+    isModalOpen: false
 };
 
 const handlers = {
+    [TOGGLE_MODAL]: (state) => ({...state, isModalOpen: !state.isModalOpen}),
     DEFAULT: (state) => state,
 };
 
