@@ -1,4 +1,4 @@
-import { TOGGLE_MODAL } from '../types';
+import { ADD_NEW_BOOK, TOGGLE_MODAL } from '../types';
 
 const initialState = {
     table: [
@@ -29,6 +29,10 @@ const initialState = {
 
 const handlers = {
     [TOGGLE_MODAL]: (state) => ({...state, isModalOpen: !state.isModalOpen}),
+    [ADD_NEW_BOOK]: (state, {payload}) => ({...state, table: [...state.table, {
+        ...payload,
+        id: `${new Date()}_${payload.bookName}`
+    }]}),
     DEFAULT: (state) => state,
 };
 

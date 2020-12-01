@@ -1,6 +1,5 @@
 import React from 'react';
 import { Formik } from 'formik';
-import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import { ModalForm } from '../ModalForm/ModalForm';
 
 export const ModalFormValidate = () => {
