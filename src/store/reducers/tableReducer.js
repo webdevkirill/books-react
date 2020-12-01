@@ -1,29 +1,7 @@
 import { ADD_NEW_BOOK, TOGGLE_MODAL } from '../types';
 
 const initialState = {
-    table: [
-        {
-            id: new Date(),
-            name: 'First book',
-            author: 'First author',
-            pageNumbers: '100',
-            year: '2020'
-        },
-        {
-            id: new Date(),
-            name: 'Second book',
-            author: 'Second author',
-            pageNumbers: '200',
-            year: '2010'
-        },
-        {
-            id: new Date(),
-            name: 'Second book',
-            author: 'Second author',
-            pageNumbers: '250',
-            year: '2015'
-        }
-    ],
+    table: [],
     isModalOpen: false
 };
 

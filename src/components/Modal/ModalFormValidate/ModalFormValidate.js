@@ -36,9 +36,9 @@ export const ModalFormValidate = () => {
                 }
                 return errors;
             }}
-            onSubmit={(fields, actions) => {
+            onSubmit={(fields, {resetForm}) => {
                 dispatch(addNewBook(fields));
-                actions.resetForm({
+                resetForm({
                     name: '',
                     author: '',
                     pageNumbers: '',

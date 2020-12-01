@@ -6,6 +6,12 @@ import { TableWrapper } from './StyledAppTable';
 export const AppTable = () => {
 
     const table = useSelector(state => state.tableReducer.table);
+
+    if (!table.length) {
+        return (
+            <h2>Добавьте первую книгу</h2>
+        )
+    }
     
     return (
         <TableWrapper>
@@ -19,7 +25,7 @@ export const AppTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {
+                    {   
                         table.map( ({id, name, author, pageNumbers, year}) => (
                             <tr key={id}>
                                 <td>{name}</td>
