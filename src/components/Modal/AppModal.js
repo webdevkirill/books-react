@@ -3,6 +3,7 @@ import { ModalStyled, Overlay, ModalCloseButton, ModalTitle } from './AppModalSt
 import closeIcon from '../../close.svg';
 import { useDispatch } from 'react-redux';
 import { toggleModal } from '../../store/actions/tableActions';
+import { ModalForm } from './ModalForm/ModalForm';
 
 export const AppModal = () => {
 
@@ -16,6 +17,7 @@ export const AppModal = () => {
                     onClick={() => dispatch(toggleModal())}
                 />
                 <ModalTitle>Добавить новую книгу</ModalTitle>
+                <ModalForm />
             </ModalStyled>
         </Overlay>
     )
