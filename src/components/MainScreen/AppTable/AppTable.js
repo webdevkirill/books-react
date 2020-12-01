@@ -1,8 +1,11 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 import { Container, TableWrapper } from './StyledAppTable';
 
 export const AppTable = ({data}) => {
+
+    const table = useSelector(state => state.tableReducer.table);
     
     return (
         <Container>
@@ -18,7 +21,7 @@ export const AppTable = ({data}) => {
                     </thead>
                     <tbody>
                         {
-                            data.map( ({id, name, author, pageNumbers, year}) => (
+                            table.map( ({id, name, author, pageNumbers, year}) => (
                                 <tr key={id}>
                                     <td>{name}</td>
                                     <td>{author}</td>

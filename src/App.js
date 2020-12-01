@@ -2,6 +2,8 @@ import React from 'react';
 import { createGlobalStyle } from "styled-components";
 import { AppTable } from './components/MainScreen/AppTable/AppTable';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux';
+import { store } from './store/index';
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -12,36 +14,12 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-const mockBookData = [
-    {
-        id: new Date(),
-        name: 'First book',
-        author: 'First author',
-        pageNumbers: '100',
-        year: '2020'
-    },
-    {
-        id: new Date(),
-        name: 'Second book',
-        author: 'Second author',
-        pageNumbers: '200',
-        year: '2010'
-    },
-    {
-        id: new Date(),
-        name: 'Second book',
-        author: 'Second author',
-        pageNumbers: '250',
-        year: '2015'
-    }
-];
-
 function App() {
     return (
-        <>
-            <AppTable data={mockBookData} />
+        <Provider store={store}>
+            <AppTable />
             <GlobalStyles />
-        </>
+        </Provider>
     );
 }
 
