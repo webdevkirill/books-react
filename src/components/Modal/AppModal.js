@@ -1,5 +1,5 @@
 import React from 'react';
-import { ModalStyled, Overlay, ModalCloseButton } from './AppModalStyled';
+import { ModalStyled, Overlay, ModalCloseButton, ModalTitle } from './AppModalStyled';
 import closeIcon from '../../close.svg';
 import { useDispatch } from 'react-redux';
 import { toggleModal } from '../../store/actions/tableActions';
@@ -14,8 +14,8 @@ export const AppModal = () => {
                 <ModalCloseButton 
                     img={closeIcon}
                     onClick={() => dispatch(toggleModal())}
-                >
-                </ModalCloseButton>
+                />
+                <ModalTitle>Добавить новую книгу</ModalTitle>
             </ModalStyled>
         </Overlay>
     )

@@ -32,3 +32,9 @@ export const ModalCloseButton = styled.a`
     padding: 0;
     background-image: url(${props => props.img});
 `;
+
+export const ModalTitle = styled.h3`
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 50px;
+`;
