@@ -1,6 +1,5 @@
 import React from 'react';
 import { createGlobalStyle } from "styled-components";
-import { AppTable } from './components/MainScreen/AppTable/AppTable';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import { store } from './store/index';
