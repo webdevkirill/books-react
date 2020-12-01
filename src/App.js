@@ -4,6 +4,7 @@ import { AppTable } from './components/MainScreen/AppTable/AppTable';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import { store } from './store/index';
+import { MainScreen } from './components/MainScreen/index';
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -17,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
 function App() {
     return (
         <Provider store={store}>
-            <AppTable />
+            <MainScreen />
             <GlobalStyles />
         </Provider>
     );
