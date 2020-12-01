@@ -36,9 +36,14 @@ export const ModalFormValidate = () => {
                 }
                 return errors;
             }}
-            onSubmit={fields => {
-                console.log(fields)
+            onSubmit={(fields, actions) => {
                 dispatch(addNewBook(fields));
+                actions.resetForm({
+                    name: '',
+                    author: '',
+                    pageNumbers: '',
+                    year: '',
+                });
             }}>
                 {({
                     values,
