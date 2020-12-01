@@ -17,4 +17,18 @@ export const ModalStyled = styled.div`
     width: 600px;
     height: 600px;
     background-color: #fff;
+    position: relative;
+    padding: 20px;
+`;
+
+export const ModalCloseButton = styled.a`
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    color: #000;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-image: url(${props => props.img});
 `;
